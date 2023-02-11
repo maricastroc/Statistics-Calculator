@@ -1,0 +1,446 @@
+/* Geral */
+* {
+    box-sizing: border-box;
+    font-family: "Titillium Web";
+}
+
+body {
+    font-size: 18px;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+:root {
+    --bg-color: #000000;
+    --light-bg-color: #191919;
+    --primary-color: #2ca1cc;
+    --secondary-color: #ffffff;
+    --medium-blue-color: #196b82;
+    --extras-color: #ababab;
+}
+
+.extras {
+    font-size: 16px;
+    color: var(--extras-color);
+    margin: 1.5rem 0rem 0rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96vw;
+}
+
+.button-offcanvas {
+    border: 1px solid var(--secondary-color);
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    padding: 0.3rem 0.6rem;
+    margin-right: 1rem;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.button-offcanvas:hover {
+    border: 1px solid var(--medium-blue-color);
+    background-color: var(--medium-blue-color);
+    color: var(--secondary-color);
+}
+
+.offcanvas-container {
+    background-color: var(--light-bg-color);
+}
+
+.offcanvas-title {
+    font-size: 23px;
+}
+
+.offcanvas-operation {
+    color: var(--secondary-color);
+}
+
+.offcanvas-operation h6 {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.hr {
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.container {
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    padding-bottom: 2rem;
+    width: 100vw;
+    margin-left: 10rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#img {
+    width: 18rem;
+}
+
+.main-content button {
+    font-family: "Titillium Web";
+    font-size: 16px;
+    background-color: black;
+    color: var(--secondary-color);
+    border: var(--secondary-color) 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.7s;
+    margin-left: 0.5rem;
+}
+
+.main-content button:hover {
+    background-color: var(--medium-blue-color);
+    color: var(--secondary-color);
+    border: var(--medium-blue-color) 2px solid;
+}
+
+/* Arithmetic */
+.arithmetic {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+#title-arithmetic {
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
+#input-arithmetic,
+#input-median,
+#input-mode {
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0.1rem 0.7rem;
+    margin-left: 0.2rem;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-family: "Titillium Web";
+    width: 14rem;
+}
+
+#btn-start-arithmetic,
+#btn-start-median,
+#btn-start-mode,
+#btn-start-weighted {
+    margin-left: 0;
+    padding: 0.2rem 0.7rem;
+    margin-top: 0.5rem;
+}
+
+#btn-calculate-arithmetic,
+#btn-calculate-median,
+#btn-calculate-mode {
+    margin-left: 2rem;
+}
+
+#btn-hide-arithmetic,
+#btn-hide-median,
+#btn-hide-mode {
+    color: var(--secondary-color);
+    border: var(--secondary-color) 2px solid;
+}
+
+#btn-hide-arithmetic:hover {
+    background-color: var(--medium-blue-color);
+    color: var(--secondary-color);
+    border: var(--medium-blue-color) 2px solid;
+}
+
+#result-arithmetic,
+#result-median,
+#result-mode {
+    color: var(--primary-color);
+    margin-top: 0.8rem;
+}
+
+/* Median */
+#title-median,
+#title-mode,
+#title-weighted {
+    color: var(--primary-color);
+    margin-top: 3.3rem;
+}
+
+#btn-hide-median:hover {
+    background-color: var(--medium-blue-color);
+    color: var(--secondary-color);
+    border: var(--medium-blue-color) 2px solid;
+}
+
+/* Mode */
+#btn-hide-mode:hover {
+    background-color: var(--medium-blue-color);
+    color: var(--secondary-color);
+    border: var(--medium-blue-color) 2px solid;
+}
+
+/* Weighted */
+.weighted {
+    min-width: 100vh;
+}
+
+.weighted label {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.all-weighted-inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin-right: 0;
+    gap: 1rem;
+}
+
+.inputs-container input {
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0.1rem 0.5rem;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-family: "Titillium Web";
+    width: 6.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#btn-clear-weighted {
+    color: var(--secondary-color);
+    border: var(--secondary-color) 2px solid;
+    margin-left: 1rem;
+    margin-right: 0.4rem;
+}
+
+#btn-hide-weighted:hover {
+    background-color: var(--medium-blue-color);
+    color: var(--secondary-color);
+    border: var(--medium-blue-color) 2px solid;
+}
+
+#result-weighted {
+    color: var(--primary-color);
+    margin-top: 2rem;
+}
+
+#btn-add-row {
+    color: var(--secondary-color);
+    border: var(--secondary-color) 2px solid;
+    margin-left: 0;
+    margin-right: 2rem;
+    font-weight: 700;
+}
+
+#btn-add-row:hover {
+    background-color: var(--medium-blue-color);
+    color: var(--secondary-color);
+    border: var(--medium-blue-color) 2px solid;
+}
+
+.extras-weighted {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+#btn-copy-arithmetic,
+#btn-copy-median,
+#btn-copy-mode,
+#btn-copy-weighted {
+    border: transparent;
+    color: var(--extras-color);
+    border-bottom: var(--extras-color) 2px solid;
+    border-radius: 0px;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+#btn-copy-arithmetic:hover {
+    border: transparent;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) 2px solid;
+    border-radius: 0px;
+}
+
+#btn-copy-median:hover {
+    border: transparent;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) 2px solid;
+    border-radius: 0px;
+}
+
+#btn-copy-mode:hover {
+    border: transparent;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) 2px solid;
+    border-radius: 0px;
+}
+
+#btn-copy-weighted:hover {
+    border: transparent;
+    background-color: transparent;
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) 2px solid;
+    border-radius: 0px;
+}
+
+.success {
+    color: var(--secondary-color);
+    border-bottom: var(--secondary-color) 2px solid;
+}
+
+@media (max-width: 1400px) {
+    .container {
+        gap: 6rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    .container {
+        margin-left: 5rem;
+    }
+}
+
+@media (max-width: 1098px) {
+    .arithmetic,
+    .median,
+    .mode {
+        max-width: 30rem;
+    }
+    #btn-calculate-arithmetic,
+    #btn-calculate-median,
+    #btn-calculate-mode {
+        margin-left: 0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        width: 100vw;
+        gap: 3rem;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 4rem;
+    }
+    #img {
+        width: 15rem;
+        margin-top: 3rem;
+        margin-left: 10rem;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5rem;
+    }
+    .arithmetic,
+    .median,
+    .mode,
+    .weighted {
+        width: 60vw;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    .all-weighted-inputs {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 744px) {
+    .extras {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 0;
+    }
+    .container {
+        margin-left: 0rem;
+        padding: 0;
+        justify-content: left;
+        align-items: start;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    #img {
+        margin-left: 5rem;
+    }
+    .arithmetic,
+    .median,
+    .mode,
+    .weighted {
+        width: 40vw;
+    }
+
+    #input-arithmetic,
+    #input-median,
+    #input-mode {
+        margin-top: 1rem;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+    .all-weighted-inputs {
+        width: auto;
+        margin-right: 5rem;
+    }
+}
+
+@media (max-width: 562px) {
+    .all-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+    }
+    .extras {
+        justify-content: center;
+        align-items: center;
+    }
+    .main-content {
+        margin-bottom: 5rem;
+    }
+
+    .arithmetic,
+    .median,
+    .mode,
+    .weighted {
+        width: 40rem;
+    }
+
+    .all-weighted-inputs {
+        margin-right: 0;
+    }
+}

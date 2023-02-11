@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Favicon -->
+        <link
+            rel="shortcut icon"
+            href="./images/noun-math-3947067.png"
+            type="image/x-icon"
+        />
+
+        <!-- CSS Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+            crossorigin="anonymous"
+        />
+
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        />
+        <title>Statistic</title>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <div class="all-container">
+            <div class="warning w-25 p-3 fixed-bottom">
+                <div
+                    class="alert alert-light alert-dismissible fade show"
+                    role="alert"
+                    id="warning"
+                >
+                    <strong
+                        >Please, insert a valid
+                        input.</strong
+                    >
+                    <button
+                        type="button"
+                        class="btn-close"
+                        id="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"
+                    ></button>
+                </div>
+            </div>
+            <div class="extras">
+                <div>
+                    Developed by Mariana Castro &copy; 2023
+                </div>
+                <button
+                    class="button-offcanvas"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvas"
+                    aria-controls="offcanvas"
+                >
+                    What do these operations mean?
+                </button>
+
+                <div
+                    class="offcanvas offcanvas-start offcanvas-container"
+                    tabindex="-1"
+                    id="offcanvas"
+                    aria-labelledby="offcanvasExampleLabel"
+                >
+                    <div class="offcanvas-header">
+                        <h5
+                            class="offcanvas-title mt-3 ms-3 me-3"
+                            id="offcanvasExampleLabel"
+                        >
+                            Math Operations
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close btn-close-white text-reset"
+                            data-bs-dismiss="offcanvas"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="offcanvas-body ms-3 me-3">
+                        <div class="offcanvas-operation">
+                            <h6>Arithmetic Average</h6>
+                            <p>
+                                The arithmetic mean simply
+                                involves taking the sum of a
+                                group of numbers, then
+                                dividing that sum by the
+                                count of the numbers used in
+                                the series.
+                            </p>
+                        </div>
+                        <div
+                            class="offcanvas-operation mt-4"
+                        >
+                            <h6>Median</h6>
+                            <p>
+                                Median is the point above
+                                and below which half (50%)
+                                the observed data falls, and
+                                so represents the midpoint
+                                of the data.
+                            </p>
+                        </div>
+                        <div
+                            class="offcanvas-operation mt-4"
+                        >
+                            <h6>Mode</h6>
+                            <p>
+                                The mode is the value that
+                                appears most frequently in a
+                                data set. A set of data may
+                                have one mode, more than one
+                                mode, or no mode at all.
+                            </p>
+                        </div>
+                        <div
+                            class="offcanvas-operation mt-4"
+                        >
+                            <h6>Weighted Average</h6>
+                            <p>
+                                Weighted average takes into
+                                account the varying degrees
+                                of importance of the numbers
+                                in a data set - each number
+                                in the data set is
+                                multiplied by a
+                                predetermined weight.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="img">
+                    <img
+                        src="./images/einstein.png"
+                        alt=""
+                        id="img"
+                    />
+                </div>
+                <div class="main-content">
+                    <div class="arithmetic">
+                        <h3 id="title-arithmetic">
+                            Arithmetic Average
+                        </h3>
+                        <button
+                            type="button"
+                            id="btn-start-arithmetic"
+                        >
+                            Start Calculating!
+                        </button>
+                        <label
+                            for="input-arithmetic"
+                            id="label-arithmetic"
+                            >Insert two or more numbers:
+                        </label>
+                        <input
+                            type="text"
+                            name="input-arithmetic"
+                            id="input-arithmetic"
+                            placeholder="number1, number2..."
+                        />
+                        <button
+                            type="button"
+                            id="btn-calculate-arithmetic"
+                        >
+                            Calculate!
+                        </button>
+                        <button
+                            type="button"
+                            id="btn-clear-arithmetic"
+                        >
+                            Clear
+                        </button>
+                        <button
+                            type="button"
+                            id="btn-hide-arithmetic"
+                        >
+                            Hide
+                        </button>
+                        <div id="result-arithmetic">
+                            Result:
+                        </div>
+                        <button
+                            type="button"
+                            id="btn-copy-arithmetic"
+                        >
+                            Copy Result
+                        </button>
+                    </div>
+
+                    <div class="median">
+                        <h3 id="title-median">Median</h3>
+                        <button
+                            type="button"
+                            id="btn-start-median"
+                        >
+                            Start Calculating!
+                        </button>
+                        <label
+                            for="input-median"
+                            id="label-median"
+                            >Insert two or more numbers:
+                        </label>
+                        <input
+                            type="text"
+                            name="input-median"
+                            id="input-median"
+                            placeholder="number1, number2..."
+                        />
+                        <button
+                            type="button"
+                            id="btn-calculate-median"
+                        >
+                            Calculate!
+                        </button>
+                        <button
+                            type="button"
+                            id="btn-clear-median"
+                        >
+                            Clear
+                        </button>
+                        <button
+                            type="button"
+                            id="btn-hide-median"
+                        >
+                            Hide
+                        </button>
+                        <div id="result-median">
+                            Result:
+                        </div>
+                        <button
+                            type="button"
+                            id="btn-copy-median"
+                        >
+                            Copy Result
+                        </button>
+                    </div>
+
+                    <div class="mode">
+                        <h3 id="title-mode">Mode</h3>
+                        <button
+                            type="button"
+                            id="btn-start-mode"
+                        >
+                            Start Calculating!
+                        </button>
+                        <label
+                            for="input-mode"
+                            id="label-mode"
+                            >Insert two or more numbers:
+                        </label>
+                        <input
+                            type="text"
+                            name="input-mode"
+                            id="input-mode"
+                            placeholder="number1, number2..."
+                        />
+                        <button
+                            type="button"
+                            id="btn-calculate-mode"
+                        >
+                            Calculate!
+                        </button>
+                        <button
+                            type="button"
+                            id="btn-clear-mode"
+                        >
+                            Clear
+                        </button>
+                        <button
+                            type="button"
+                            id="btn-hide-mode"
+                        >
+                            Hide
+                        </button>
+                        <div id="result-mode">Result:</div>
+                        <button
+                            type="button"
+                            id="btn-copy-mode"
+                        >
+                            Copy Result
+                        </button>
+                    </div>
+
+                    <div class="weighted">
+                        <h3 id="title-weighted">
+                            Weighted Average
+                        </h3>
+                        <button
+                            type="button"
+                            id="btn-start-weighted"
+                        >
+                            Start Calculating!
+                        </button>
+                        <label
+                            for="input-weighted"
+                            id="label-weighted"
+                            >Insert two or more numbers and
+                            their weight:
+                        </label>
+                        <div class="all-weighted-inputs">
+                            <div class="inputs-container">
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-number1"
+                                    placeholder="number"
+                                    class="input-number"
+                                />
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-weight1"
+                                    placeholder="weight"
+                                    class="input-weight"
+                                />
+                            </div>
+                            <div class="inputs-container">
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-number2"
+                                    placeholder="number"
+                                    class="input-number"
+                                />
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-weight2"
+                                    placeholder="weight"
+                                    class="input-weight"
+                                />
+                            </div>
+                            <div class="inputs-container">
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-number3"
+                                    placeholder="number"
+                                    class="input-number"
+                                />
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-weight3"
+                                    placeholder="weight"
+                                    class="input-weight"
+                                />
+                            </div>
+                            <div class="inputs-container">
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-number4"
+                                    placeholder="number"
+                                    class="input-number"
+                                />
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-weight4"
+                                    placeholder="weight"
+                                    class="input-weight"
+                                />
+                            </div>
+                            <div class="inputs-container">
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-number5"
+                                    placeholder="number"
+                                    class="input-number"
+                                />
+                                <input
+                                    type="number"
+                                    name="input-weighted"
+                                    id="input-weight5"
+                                    placeholder="weight"
+                                    class="input-weight"
+                                />
+                            </div>
+                        </div>
+                        <div class="extras-weighted">
+                            <button
+                                type="button"
+                                id="btn-add-row"
+                            >
+                                +
+                            </button>
+                            <button
+                                type="button"
+                                id="btn-calculate-weighted"
+                            >
+                                Calculate!
+                            </button>
+                            <button
+                                type="button"
+                                id="btn-clear-weighted"
+                            >
+                                Clear
+                            </button>
+                            <button
+                                type="button"
+                                id="btn-hide-weighted"
+                            >
+                                Hide
+                            </button>
+                        </div>
+
+                        <div id="result-weighted">
+                            Result:
+                        </div>
+                        <button
+                            type="button"
+                            id="btn-copy-weighted"
+                        >
+                            Copy Result
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Script Bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./src/main.js" type="module"></script>
+    </body>
+</html>
