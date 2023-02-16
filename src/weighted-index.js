@@ -25,26 +25,33 @@ const btnStartWeighted = document.getElementById(
 const btnAddRow = document.getElementById("btn-add-row");
 
 const hideWeighted = () => {
-    labelWeighted.classList.add("hide");
-    inputWeighted.classList.add("hide");
-    btnCalculateWeighted.classList.add("hide");
-    btnClearWeighted.classList.add("hide");
-    btnHideWeighted.classList.add("hide");
-    resultWeighted.classList.add("hide");
-    btnCopyWeighted.classList.add("hide");
-    btnAddRow.classList.add("hide");
+    [
+        labelWeighted,
+        inputWeighted,
+        btnCalculateWeighted,
+        btnClearWeighted,
+        btnHideWeighted,
+        resultWeighted,
+        btnCopyWeighted,
+        btnAddRow,
+    ].forEach((element) => element.classList.add("hide"));
+
     btnStartWeighted.classList.remove("hide");
 };
 
 const showWeighted = () => {
-    labelWeighted.classList.remove("hide");
-    inputWeighted.classList.remove("hide");
-    btnCalculateWeighted.classList.remove("hide");
-    btnClearWeighted.classList.remove("hide");
-    btnHideWeighted.classList.remove("hide");
-    resultWeighted.classList.remove("hide");
-    btnCopyWeighted.classList.remove("hide");
-    btnAddRow.classList.remove("hide");
+    [
+        labelWeighted,
+        inputWeighted,
+        btnCalculateWeighted,
+        btnClearWeighted,
+        btnHideWeighted,
+        resultWeighted,
+        btnCopyWeighted,
+        btnAddRow,
+    ].forEach((element) =>
+        element.classList.remove("hide")
+    );
     btnStartWeighted.classList.add("hide");
 };
 
@@ -81,9 +88,11 @@ const addRow = () => {
         );
 
         btnClearWeighted.addEventListener("click", () => {
-            newWeightedDiv.remove();
-            newNumberInput.remove();
-            newWeightInput.remove();
+            [
+                newWeightedDiv,
+                newNumberInput,
+                newWeightInput,
+            ].forEach((element) => element.remove());
         });
     }
 };

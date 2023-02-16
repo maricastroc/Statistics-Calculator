@@ -16,24 +16,30 @@ const btnStartMode = document.getElementById(
 );
 
 const hideMode = () => {
-    labelMode.classList.add("hide");
-    inputMode.classList.add("hide");
-    btnCalculateMode.classList.add("hide");
-    btnClearMode.classList.add("hide");
-    btnHideMode.classList.add("hide");
-    resultMode.classList.add("hide");
-    btnCopyMode.classList.add("hide");
+    [
+        labelMode,
+        inputMode,
+        btnCalculateMode,
+        btnClearMode,
+        btnHideMode,
+        resultMode,
+        btnCopyMode,
+    ].forEach((element) => element.classList.add("hide"));
     btnStartMode.classList.remove("hide");
 };
 
 const showMode = () => {
-    labelMode.classList.remove("hide");
-    inputMode.classList.remove("hide");
-    btnCalculateMode.classList.remove("hide");
-    btnClearMode.classList.remove("hide");
-    btnHideMode.classList.remove("hide");
-    resultMode.classList.remove("hide");
-    btnCopyMode.classList.remove("hide");
+    [
+        labelMode,
+        inputMode,
+        btnCalculateMode,
+        btnClearMode,
+        btnHideMode,
+        resultMode,
+        btnCopyMode,
+    ].forEach((element) =>
+        element.classList.remove("hide")
+    );
     btnStartMode.classList.add("hide");
 };
 

@@ -19,24 +19,30 @@ const btnStartMedian = document.getElementById(
 );
 
 const hideMedian = () => {
-    labelMedian.classList.add("hide");
-    inputMedian.classList.add("hide");
-    btnCalculateMedian.classList.add("hide");
-    btnClearMedian.classList.add("hide");
-    btnHideMedian.classList.add("hide");
-    resultMedian.classList.add("hide");
-    btnCopyMedian.classList.add("hide");
+    [
+        labelMedian,
+        inputMedian,
+        btnCalculateMedian,
+        btnClearMedian,
+        btnHideMedian,
+        resultMedian,
+        btnCopyMedian,
+    ].forEach((element) => element.classList.add("hide"));
     btnStartMedian.classList.remove("hide");
 };
 
 const showMedian = () => {
-    labelMedian.classList.remove("hide");
-    inputMedian.classList.remove("hide");
-    btnCalculateMedian.classList.remove("hide");
-    btnClearMedian.classList.remove("hide");
-    btnHideMedian.classList.remove("hide");
-    resultMedian.classList.remove("hide");
-    btnCopyMedian.classList.remove("hide");
+    [
+        labelMedian,
+        inputMedian,
+        btnCalculateMedian,
+        btnClearMedian,
+        btnHideMedian,
+        resultMedian,
+        btnCopyMedian,
+    ].forEach((element) =>
+        element.classList.remove("hide")
+    );
     btnStartMedian.classList.add("hide");
 };
 

@@ -24,24 +24,29 @@ const btnStartArithmetic = document.getElementById(
 );
 
 const hideArithmetic = () => {
-    labelArithmetic.classList.add("hide");
-    inputArithmetic.classList.add("hide");
-    btnCalculateArithmetic.classList.add("hide");
-    btnClearArithmetic.classList.add("hide");
-    btnHideArithmetic.classList.add("hide");
-    resultArithmetic.classList.add("hide");
-    btnCopyArithmetic.classList.add("hide");
+    [
+        labelArithmetic,
+        inputArithmetic,
+        btnCalculateArithmetic,
+        btnClearArithmetic,
+        btnHideArithmetic,
+        resultArithmetic,
+        btnCopyArithmetic,
+    ].forEach((element) => element.classList.add("hide"));
     btnStartArithmetic.classList.remove("hide");
 };
-
 const showArithmetic = () => {
-    labelArithmetic.classList.remove("hide");
-    inputArithmetic.classList.remove("hide");
-    btnCalculateArithmetic.classList.remove("hide");
-    btnClearArithmetic.classList.remove("hide");
-    btnHideArithmetic.classList.remove("hide");
-    resultArithmetic.classList.remove("hide");
-    btnCopyArithmetic.classList.remove("hide");
+    [
+        labelArithmetic,
+        inputArithmetic,
+        btnCalculateArithmetic,
+        btnClearArithmetic,
+        btnHideArithmetic,
+        resultArithmetic,
+        btnCopyArithmetic,
+    ].forEach((element) =>
+        element.classList.remove("hide")
+    );
     btnStartArithmetic.classList.add("hide");
 };
 
